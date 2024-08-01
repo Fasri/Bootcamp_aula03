@@ -71,19 +71,28 @@
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
-texto = " A casa de felipe é azul mas a casa de Luis é vermelha."
-palavras = texto.split()
-cont = {}
-for p in palavras:
-    if p in cont:
-        cont[p] += 1
-    else:
-        cont[p] = 1
+# texto = " A casa de felipe é azul mas a casa de Luis é vermelha."
+# palavras = texto.split()
+# cont = {}
+# for p in palavras:
+#     if p in cont:
+#         cont[p] += 1
+#     else:
+#         cont[p] = 1
 
-print(cont) 
+# print(cont) 
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+
+lista = [23, 34, 54, 86, 100]
+min = min(lista)
+max = max(lista)
+
+normalizados =[(x-min) / (max - min) for x in lista]
+
+print(normalizados)
+
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
