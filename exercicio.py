@@ -176,13 +176,24 @@
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
-tentativa = 1
-tentativa_max = 5
+# tentativa = 1
+# tentativa_max = 5
 
-while tentativa <= tentativa_max:
-    print(f"Reconectando{tentativa} de {tentativa_max} ")
-    tentativa +=1
-print ("Sem conexão!")
+# while tentativa <= tentativa_max:
+#     print(f"Reconectando{tentativa} de {tentativa_max} ")
+#     tentativa +=1
+# print ("Sem conexão!")
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+lista = ["casa", "esposa", "dinheiro", "filhos", "amor", "trabalho"]
+parada = "filhos"
+i = 0
+
+while i < len(lista):
+    if lista[i] == parada:
+        print(f"achou a condição de parada é {lista[i]}")
+        break
+    print(f"Verificando item: {lista[i]}")
+    i += 1
