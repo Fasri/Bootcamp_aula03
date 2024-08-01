@@ -4,19 +4,31 @@
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
 
-quantidade = int(input("Digite a quantidade: "))
-preco = int(input("Digite o preço: "))
+# quantidade = int(input("Digite a quantidade: "))
+# preco = int(input("Digite o preço: "))
 
-if quantidade > 0 and preco > 0:
-    print("Dados válidos!")
-else:
-    print("Dados inválidos!")
+# if quantidade > 0 and preco > 0:
+#     print("Dados válidos!")
+# else:
+#     print("Dados inválidos!")
 
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
 # como 'Baixa', 'Normal' ou 'Alta'. Considerando que:
+# Temperatura < 18°C é 'Baixa'
+# Temperatura >= 18°C e <= 26°C é 'Normal'
+# Temperatura > 26°C é 'Alta'
 
+temperatura = float(input("Qual a temperatura: "))
+
+if temperatura > 26:
+    print("Alta!")
+elif temperatura < 18:
+    print("Baixa!")
+else:
+    print("Normal!")
+    
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
