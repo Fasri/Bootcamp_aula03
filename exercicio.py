@@ -85,17 +85,27 @@
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
-lista = [23, 34, 54, 86, 100]
-min = min(lista)
-max = max(lista)
+# lista = [23, 34, 54, 86, 100]
+# min = min(lista)
+# max = max(lista)
 
-normalizados =[(x-min) / (max - min) for x in lista]
+# normalizados =[(x-min) / (max - min) for x in lista]
 
-print(normalizados)
+# print(normalizados)
 
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
+usuarios = [
+    {"nome": "Alice", "email": "alice@example.com"},
+    {"nome": "Bob", "email": ""},
+    {"nome": "Carol", "email": "carol@example.com"}
+]
+
+usuarios_validos = [usuario for usuario in usuarios if usuario["email"]]
+
+print(usuarios_validos)
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
