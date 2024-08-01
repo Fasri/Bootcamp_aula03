@@ -119,28 +119,36 @@
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
 
-vendas = [
-    {"categoria": "eletrônicos", "valor": 1200},
-    {"categoria": "livros", "valor": 200},
-    {"categoria": "eletrônicos", "valor": 800}
-]
+# vendas = [
+#     {"categoria": "eletrônicos", "valor": 1200},
+#     {"categoria": "livros", "valor": 200},
+#     {"categoria": "eletrônicos", "valor": 800}
+# ]
 
-agregacao = {}
+# agregacao = {}
 
-for venda in vendas:
-    categoria = venda["categoria"]
-    valor = venda["valor"]
-    if categoria in agregacao:
-        agregacao[categoria] += valor
-    else:
-        agregacao[categoria] = valor
+# for venda in vendas:
+#     categoria = venda["categoria"]
+#     valor = venda["valor"]
+#     if categoria in agregacao:
+#         agregacao[categoria] += valor
+#     else:
+#         agregacao[categoria] = valor
 
-print(agregacao)
+# print(agregacao)
 
 ### Exercícios com WHILE
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+
+dados = []
+entrada = ""
+while entrada.lower() != "sair":
+    entrada = input("Digite um valor (ou 'sair' para terminar): ")
+    if entrada.lower() != "sair":
+        dados.append(entrada)
+print(dados)
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
